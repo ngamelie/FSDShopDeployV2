@@ -8,7 +8,7 @@ const express = require("express")
 const router = require('express').Router();
 const bodyParser = require("body-parser")
 const cors = require("cors")
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 // module
 const config = require('../../config/config');
 const rep = require ('../../repository/repUser')
