@@ -8,7 +8,7 @@ const express = require("express")
 const router = require('express').Router();
 const bodyParser = require("body-parser")
 const cors = require("cors")
-const bcrypt = require('bcryptjs')
+const bcryptjs = require('bcryptjs')
 // module
 const config = require('../../config/config');
 const rep = require ('../../repository/repUser')
@@ -26,7 +26,7 @@ router.post("/", async(req, res) => {
     }
 
     await rep.getOneByEmail(obj.uemail).then((rs) => {
-        bcrypt.compare(obj.pword, rs.pword, function(err, result){
+        bcryptjs.compare(obj.pword, rs.pword, function(err, result){
             if (result) {
                 rsObj.isAuth = 1
                 rsObj.user = rs
