@@ -19,7 +19,7 @@ function Product() {
   const [uemail, setUemail] = useState("")
 
   useEffect(() => {
-    Axios.get(`http://localhost:3001/product/${id}`).then((rs) => {
+    Axios.get(PATH +`/${id}`).then((rs) => {
       //console.log(rs.data.pid);
       setProduct(rs.data);
     });
