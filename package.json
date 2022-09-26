@@ -1,0 +1,28 @@
+{
+  "name": "fsdshopdeployv2",
+  "version": "1.0.0",
+  "description": "// run React App\t\t\r >\tnpm start",
+  "main": "index.js",
+  "engines": {
+    "node": "16.17.0",
+    "npm": "8.15.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false  npm install --prefix client && npm run build --prefix client"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngamelie/FSDShopDeployV2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngamelie/FSDShopDeployV2/issues"
+  },
+  "homepage": "https://github.com/ngamelie/FSDShopDeployV2#readme"
+}

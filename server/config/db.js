@@ -3,21 +3,21 @@
  * 
  */
 
-const mysql = require("mysql2")
+ const mysql = require("mysql2")
 
-const db = {
-
-    db : mysql.createPool({
-        host: 'localhost',
-        user: 'root',
-        password: 'root2022',
-        database: 'fsdshop'
-    }).promise()
-
-}
+ const db = {
  
-
-module.exports = db;
+     db : mysql.createPool({
+         host: 'us-cdbr-east-06.cleardb.net',
+         user: 'bfa9b8132cfd93',
+         password: 'a80d49bb',
+         database: 'heroku_a0f89b729a60af4'
+     }).promise()
+ 
+ }
+  
+ 
+ module.exports = db;
 
 
 
