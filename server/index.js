@@ -11,6 +11,10 @@ const config = require('./config/config');
 const path = require("path");
 const PORT = process.env.PORT || 5000;
 
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`);
+  });
+
 app.use('/login', require('./module/login/login'))
 app.use('/login/user', require('./module/login/user'))
 app.use('/category', require('./module/category'))
